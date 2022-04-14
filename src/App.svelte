@@ -1,9 +1,9 @@
 <script>
 	export let name;
-	const fruits = ['apple', 'banana', 'orange', 'strawberry', 'coconut'];
+	export let surname;
+	export let fruits;
 
 	// #key method (like useEffect)
-	let surname = 'musk';
 	setTimeout(() => { surname = 'trump' }, 2000);
 
 	let content = `<p style="color: red">HELLO WORLD!</p>`;
@@ -40,13 +40,14 @@
 	{@html content}
 	<hr>
 	<h3>@debug method</h3>
-	{@debug fruits}
+	<!--{@debug fruits}-->
 	<p>same as console.log, look at the console</p>
 	<hr>
 	<h3>on: events</h3>
 
 	<h5>on:click</h5>
 	<button on:click="{() => count += 1}">Add</button>
+	<button on:click="{() => count -= 1}">Delete</button>
 	count: {count}
 
 	<hr>
